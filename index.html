@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paras Jimny 4X4 - Manali</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-950 text-white font-sans antialiased">
+
+<!-- Header Section -->
+<header class="w-full bg-gray-900/90 backdrop-blur-md border-b border-gray-800 px-4 sm:px-6 py-4 text-white sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    
+    <!-- Left: Logo & Branding -->
+    <div class="flex items-center space-x-3">
+      <!-- Lime Icon Box -->
+      <div class="bg-[#ccff00] text-gray-900 p-2.5 rounded-xl flex items-center justify-center font-bold shrink-0">
+        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 17l6-8 4 5 4-7 4 10H3z"></path>
+        </svg>
+      </div>
+      <!-- Brand Text -->
+      <div class="flex flex-col">
+        <span class="text-lg sm:text-xl font-black tracking-widest leading-none">PARAS</span>
+        <span class="text-[10px] sm:text-xs text-[#ccff00] font-semibold tracking-wider mt-1">JIMNY 4X4 • MANALI</span>
+      </div>
+    </div>
+
+    <!-- Center: Desktop Navigation Links -->
+    <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium tracking-wider text-gray-300">
+      <a href="#" class="hover:text-white transition-colors">THE JIMNY</a>
+      <a href="#" class="hover:text-white transition-colors">ROUTES</a>
+      <a href="#" class="hover:text-white transition-colors">MANIFESTO</a>
+      <a href="#" class="hover:text-white transition-colors">GALLERY</a>
+    </nav>
+
+    <!-- Right: Status Badge & Call Button (Desktop) -->
+    <div class="hidden md:flex items-center space-x-4">
+      <!-- Status Badge -->
+      <div class="hidden xl:flex items-center space-x-2 border border-gray-700 px-4 py-2 rounded-full text-xs font-medium tracking-wide text-gray-300 bg-gray-800/40">
+        <span class="w-2 h-2 rounded-full bg-[#ccff00] animate-pulse"></span>
+        <span>AVAILABLE TODAY</span>
+      </div>
+
+      <!-- Phone Action Button -->
+      <a href="tel:+919800000000" class="bg-[#ccff00] hover:bg-[#b3e600] transition-colors text-gray-900 font-bold px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm flex items-center space-x-2 shadow-lg shrink-0">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.36 11.36 0 003.55.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.27 1.11l-2.2 2.2z"/>
+        </svg>
+        <span>+91 9015430933</span>
+      </a>
+    </div>
+
+    <!-- Mobile Menu Trigger -->
+    <div class="lg:hidden flex items-center space-x-3">
+      <!-- Quick Call Button for Mobile -->
+      <a href="tel:+9015430933" class="bg-[#ccff00] text-gray-900 p-2.5 rounded-full flex items-center justify-center md:hidden">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.36 11.36 0 003.55.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.27 1.11l-2.2 2.2z"/>
+        </svg>
+      </a>
+
+      <!-- Smooth Animated Hamburger Button -->
+      <button id="menu-btn" class="relative w-8 h-8 text-gray-300 hover:text-white focus:outline-none flex flex-col justify-center items-center space-y-1.5 p-1">
+        <span class="w-6 h-0.5 bg-current transform transition-all duration-300 ease-in-out origin-center" id="line-1"></span>
+        <span class="w-6 h-0.5 bg-current transform transition-all duration-300 ease-in-out" id="line-2"></span>
+        <span class="w-6 h-0.5 bg-current transform transition-all duration-300 ease-in-out origin-center" id="line-3"></span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Mobile Dropdown Menu with Smooth Transition -->
+  <div id="mobile-menu" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out lg:hidden border-t border-gray-800/0">
+    <div class="pt-4 pb-2 flex flex-col space-y-4">
+      <nav class="flex flex-col space-y-3 text-sm font-medium tracking-wider text-gray-300">
+        <a href="#" class="hover:text-[#ccff00] transition-colors py-1">THE JIMNY</a>
+        <a href="#" class="hover:text-[#ccff00] transition-colors py-1">ROUTES</a>
+        <a href="#" class="hover:text-[#ccff00] transition-colors py-1">MANIFESTO</a>
+        <a href="#" class="hover:text-[#ccff00] transition-colors py-1">GALLERY</a>
+      </nav>
+      <div class="pt-2 flex items-center justify-center space-x-2 border border-gray-700 px-4 py-2 rounded-full text-xs font-medium text-gray-300 bg-gray-800/40">
+        <span class="w-2 h-2 rounded-full bg-[#ccff00] animate-pulse"></span>
+        <span>AVAILABLE TODAY</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="relative w-full min-h-[calc(100vh-73px)] bg-gray-950 flex flex-col justify-between text-white overflow-hidden font-sans">
+  
+  <!-- Background Image: Black Off-road Car on Snowy Mountain Road -->
+  <div class="absolute inset-0 z-0">
+    <img src="https://images.unsplash.com/photo-1542224566-6e85f2e6772f?q=80&w=2000&auto=format&fit=crop" 
+         alt="Black Jimny on Snowy Road" 
+         class="w-full h-full object-cover object-center scale-105 transform hover:scale-100 transition-transform duration-1000">
+    
+    <!-- Rich Dark Gradients for clear text readability -->
+    <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/75 to-gray-950/40"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-gray-950/90 via-gray-950/40 to-transparent"></div>
+  </div>
+
+  <!-- Main Hero Content Container -->
+  <div class="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 lg:py-16 flex flex-col items-start justify-center flex-grow">
+    
+    <!-- Top Pill Badge -->
+    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-xs font-semibold tracking-wider text-[#ccff00] mb-5 shadow-lg">
+      <span class="w-2 h-2 rounded-full bg-[#ccff00] animate-ping"></span>
+      <span>HIMALAYAN EXPEDITIONS • MANALI</span>
+    </div>
+
+    <!-- Big Premium Heading -->
+    <h1 class="text-4xl sm:text-6xl lg:text-8xl font-black tracking-tight uppercase leading-[1.05] drop-shadow-2xl">
+      CONQUER THE PASSES <br>
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-300 to-gray-500">IN A REAL 4X4</span>
+    </h1>
+
+    <!-- Description Paragraph -->
+    <p class="mt-5 max-w-xl text-base sm:text-lg lg:text-xl text-gray-300 font-normal leading-relaxed drop-shadow-md">
+      One driver. One Suzuki Jimny. Zero drama. I'm Paras — born in these valleys, and I'll get you over every pass between Bhuntar and Leh like it's my own backyard. Because it is.
+    </p>
+
+    <!-- Action Buttons (WhatsApp & Call) -->
+    <div class="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+      
+      <!-- WhatsApp Button -->
+      <a href="https://wa.me/" target="_blank" class="bg-[#ccff00] hover:bg-[#b3e600] active:scale-95 transition-all duration-200 text-gray-950 font-extrabold px-8 py-4 rounded-full text-sm flex items-center justify-center space-x-3 shadow-[0_0_25px_rgba(204,255,0,0.3)] group">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.124-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+        <span>BOOK VIA WHATSAPP</span>
+      </a>
+
+      <!-- Call Button -->
+      <a href="tel:+919800000000" class="border border-white/15 hover:border-white/40 bg-white/5 backdrop-blur-lg hover:bg-white/10 active:scale-95 transition-all duration-200 text-white font-semibold px-8 py-4 rounded-full text-sm flex items-center justify-center space-x-3 shadow-xl">
+        <svg class="w-4 h-4 text-[#ccff00]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+        </svg>
+        <span>CALL PARAS</span>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Empty middle space -->
+  <div class="flex-grow"></div>
+
+  <!-- Bottom Auto Slider Bar (Pause on Hover using Tailwind group and arbitrary style) -->
+  <div class="relative z-10 w-full bg-[#0a0c10] border-t border-white/10 py-4 overflow-hidden group cursor-pointer">
+    <div class="animate-marquee flex items-center whitespace-nowrap group-hover:[animation-play-state:paused]">
+      
+      <!-- Content Block 1 -->
+      <div class="flex items-center space-x-8 sm:space-x-12 px-4 sm:px-6">
+        <span class="text-xl sm:text-3xl font-black tracking-wider text-white hover:text-[#ccff00] transition-colors">SOLANG VALLEY</span>
+        <span class="w-2.5 h-2.5 bg-[#ccff00] rotate-45 shrink-0"></span>
+        <span class="text-xl sm:text-3xl font-black tracking-wider text-outline hover:text-white transition-colors">LEH EXPEDITION</span>
+        <span class="w-2.5 h-2.5 bg-[#ccff00] rotate-45 shrink-0"></span>
+        <span class="text-xl sm:text-3xl font-black tracking-wider text-white hover:text-[#ccff00] transition-colors">SPITI CIRCUIT</span>
+        <span class="w-2.5 h-2.5 bg-[#ccff00] rotate-45 shrink-0"></span>
+        <span class="text-xl sm:text-3xl font-black tracking-wider text-outline hover:text-white transition-colors">KASOL • PARVATI</span>
+        <span class="w-2.5 h-2.5 bg-[#ccff00] rotate-45 shrink-0"></span>
+        <span class="text-xl sm:text-3xl font-black tracking-wider text-white hover:text-[#ccff00] transition-colors">SISSU SNOWFIELDS</span>
+        <span class="w-2.5 h-2.5 bg-[#ccff00] rotate-45 shrink-0"></span>
+        <span class="text-xl sm:text-3xl font-black tracking-wider text-outline hover:text-white transition-colors">ROHTANG PASS</span>
+        <span class="w-2.5 h-2.5 bg-[#ccff00] rotate-45 shrink-0"></span>
+      </div>
+
+      <!-- Content Block 2 (Exact duplicate for smooth infinite loop) -->
+      <div class="flex items-center space-x-8 sm:space-x-12 px-4 sm:px-6">
+        <span class="text-xl sm:text-3xl font-black tracking-wider text-white hover:text-[#ccff00] transition-colors">SOLANG VALLEY</span>
+        <span class="w-2.5 h-2.5 bg-[#ccff00] rotate-45 shrink-0"></span>
+        <span class="text-xl sm:text-3xl font-black tracking-wider text-outline hover:text-white transition-colors">LEH EXPEDITION</span>
+        <span class="w-2.5 h-2.5 bg-[#ccff00] rotate-45 shrink-0"></span>
+        <span class="text-xl sm:text-3xl font-black tracking-wider text-white hover:text-[#ccff00] transition-colors">SPITI CIRCUIT</span>
+        <span class="w-2.5 h-2.5 bg-[#ccff00] rotate-45 shrink-0"></span>
+        <span class="text-xl sm:text-3xl font-black tracking-wider text-outline hover:text-white transition-colors">KASOL • PARVATI</span>
+        <span class="w-2.5 h-2.5 bg-[#ccff00] rotate-45 shrink-0"></span>
+        <span class="text-xl sm:text-3xl font-black tracking-wider text-white hover:text-[#ccff00] transition-colors">SISSU SNOWFIELDS</span>
+        <span class="w-2.5 h-2.5 bg-[#ccff00] rotate-45 shrink-0"></span>
+        <span class="text-xl sm:text-3xl font-black tracking-wider text-outline hover:text-white transition-colors">ROHTANG PASS</span>
+        <span class="w-2.5 h-2.5 bg-[#ccff00] rotate-45 shrink-0"></span>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+  <!-- section 2 -->
+   <!-- SECTION 1: THE MACHINE (Tilted Image + Bold Typography) -->
+  <section class="w-full min-h-screen py-16 px-4 sm:px-8 lg:px-16 flex items-center justify-center bg-[#090b0e]">
+    <div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      
+      <!-- Left: Tilted Mountain Image Container -->
+      <div class="w-full relative flex justify-center">
+        <div class="w-full max-w-lg h-[380px] sm:h-[480px] rounded-2xl overflow-hidden shadow-2xl border border-white/10 -rotate-2 sm:-rotate-3 transform transition-transform hover:rotate-0 duration-500">
+          <img src="https://images.unsplash.com/photo-1622071356556-47f1b87743de?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8amltbnl8ZW58MHx8MHx8fDA%3D" 
+               alt="Mountain Landscape" 
+               class="w-full h-full object-cover filter brightness-90">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        </div>
+      </div>
+
+      <!-- Right: Content -->
+      <div class="flex flex-col justify-center">
+        <!-- Small Tag -->
+        <div class="flex items-center space-x-2 mb-4">
+          <span class="w-6 h-[2px] bg-[#ccff00]"></span>
+          <span class="text-[#ccff00] text-xs sm:text-sm font-bold tracking-widest uppercase">The Machine</span>
+        </div>
+
+        <!-- Heading -->
+        <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-none mb-6">
+          Small Body. <br>
+          <span class="text-[#ccff00]">Big Mountain</span> <br>
+          Energy.
+        </h2>
+
+        <!-- Description -->
+        <p class="text-gray-300 text-sm sm:text-base leading-relaxed max-w-xl">
+          Big SUVs get stuck. The Jimny doesn't. A rigid ladder frame, featherweight body and a proper low-range gearbox mean we go where the tourist tempo travellers turn around.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SECTION 2: SPECS GRID (Car Image + 4 Feature Cards) -->
+  <section class="w-full min-h-screen py-16 px-4 sm:px-8 lg:px-16 flex items-center justify-center bg-[#090b0e] border-t border-white/5">
+    <div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      
+      <!-- Left: Jimny Car Image Card (Overlap style) -->
+      <div class="lg:col-span-5 relative flex justify-center">
+        <div class="w-full max-w-md bg-[#12161d] rounded-2xl p-4 border border-white/10 shadow-2xl relative overflow-hidden group">
+          <div class="relative h-[300px] sm:h-[350px] rounded-xl overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1624464823981-ae6ef2c9a469?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8amltbnl8ZW58MHx8MHx8fDA%3D" 
+                 alt="Suzuki Jimny Alpha 4x4" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center text-xs font-bold tracking-wider text-[#ccff00]">
+              <span>SUZUKI JIMNY</span>
+              <span>ALPHA 4X4</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: 2x2 Specs Grid -->
+      <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+        <!-- Feature Box 1 -->
+        <div class="bg-[#12161d] border border-white/10 rounded-2xl p-6 sm:p-8 hover:border-[#ccff00]/40 transition-all duration-300">
+          <h3 class="text-xl sm:text-2xl font-black text-[#ccff00] tracking-wider mb-2">ALLGRIP PRO</h3>
+          <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">4x4 low-range transfer gear for black ice, slush and sludge.</p>
+        </div>
+
+        <!-- Feature Box 2 -->
+        <div class="bg-[#12161d] border border-white/10 rounded-2xl p-6 sm:p-8 hover:border-[#ccff00]/40 transition-all duration-300">
+          <h3 class="text-xl sm:text-2xl font-black text-[#ccff00] tracking-wider mb-2">210 MM</h3>
+          <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">Ground clearance that laughs at snow walls and river stones.</p>
+        </div>
+
+        <!-- Feature Box 3 -->
+        <div class="bg-[#12161d] border border-white/10 rounded-2xl p-6 sm:p-8 hover:border-[#ccff00]/40 transition-all duration-300">
+          <h3 class="text-xl sm:text-2xl font-black text-[#ccff00] tracking-wider mb-2">HEATED CABIN</h3>
+          <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">Warm seats and a blasting heater at -10°C passes.</p>
+        </div>
+
+        <!-- Feature Box 4 -->
+        <div class="bg-[#12161d] border border-white/10 rounded-2xl p-6 sm:p-8 hover:border-[#ccff00]/40 transition-all duration-300">
+          <h3 class="text-xl sm:text-2xl font-black text-[#ccff00] tracking-wider mb-2">4.9 M TURN</h3>
+          <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">Tiny turning circle built for Old Manali's hairpins.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+</section>
+
+
+<!-- SECTION: ROUTES & SERVICES WITH TOP & BOTTOM OUTLINES -->
+  <section class="w-full min-h-screen py-24 px-4 sm:px-8 lg:px-16 flex flex-col justify-center items-center bg-[#090b0e] border-t border-b border-white/10">
+    <div class="max-w-7xl w-full">
+      
+      <!-- Section Header -->
+      <div class="mb-12">
+        <div class="flex items-center space-x-2 mb-3">
+          <span class="w-8 h-[2px] bg-[#ccff00]"></span>
+          <span class="text-[#ccff00] text-xs sm:text-sm font-bold tracking-widest uppercase">Routes & Services</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-none">
+          Where do you <br>
+          <span class="text-[#ccff00]">want to go?</span>
+        </h2>
+      </div>
+
+      <!-- Services Grid (2 Columns, Responsive) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- CARD 1: Airport & Station Pickup -->
+        <div class="bg-[#12161d] border border-white/10 rounded-2xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:border-[#ccff00]/60 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(204,255,0,0.1)] group">
+          <div>
+            <!-- Top Row: Icon & Price -->
+            <div class="flex justify-between items-start mb-6">
+              <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#ccff00] group-hover:bg-[#ccff00] group-hover:text-black transition-colors duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                </svg>
+              </div>
+              <div class="text-right">
+                <span class="text-xl sm:text-2xl font-black text-[#ccff00]">₹3,500</span>
+                <p class="text-[10px] sm:text-xs text-gray-400 uppercase tracking-widest">From • Per Trip</p>
+              </div>
+            </div>
+
+            <!-- Title & Description -->
+            <h3 class="text-xl sm:text-2xl font-black uppercase tracking-wide mb-3 text-white">Airport & Station Pickup</h3>
+            <p class="text-xs sm:text-sm text-gray-400 leading-relaxed mb-6">
+              Bhuntar Airport and Chandigarh/Kalka station transfers. Flight tracked, waiting at arrivals — even at 3 AM.
+            </p>
+
+            <!-- Features Checkmark List -->
+            <ul class="space-y-2.5 mb-8 text-xs sm:text-sm text-gray-300">
+              <li class="flex items-center space-x-2.5">
+                <svg class="w-4 h-4 text-[#ccff00] shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Flight & train tracking</span>
+              </li>
+              <li class="flex items-center space-x-2.5">
+                <svg class="w-4 h-4 text-[#ccff00] shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Night pickups welcome</span>
+              </li>
+              <li class="flex items-center space-x-2.5">
+                <svg class="w-4 h-4 text-[#ccff00] shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Roof rack for ski gear</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Action Link -->
+          <div>
+            <a href="https://wa.me/" target="_blank" class="inline-flex items-center space-x-2 text-xs sm:text-sm font-extrabold text-[#ccff00] hover:text-white transition-colors">
+              <span>ENQUIRE ON WHATSAPP</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 2: Manali Local Sightseeing -->
+        <div class="bg-[#12161d] border border-white/10 rounded-2xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:border-[#ccff00]/60 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(204,255,0,0.1)] group">
+          <div>
+            <!-- Top Row: Icon & Price -->
+            <div class="flex justify-between items-start mb-6">
+              <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#ccff00] group-hover:bg-[#ccff00] group-hover:text-black transition-colors duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div class="text-right">
+                <span class="text-xl sm:text-2xl font-black text-[#ccff00]">₹2,500</span>
+                <p class="text-[10px] sm:text-xs text-gray-400 uppercase tracking-widest">From • Per Day</p>
+              </div>
+            </div>
+
+            <!-- Title & Description -->
+            <h3 class="text-xl sm:text-2xl font-black uppercase tracking-wide mb-3 text-white">Manali Local Sightseeing</h3>
+            <p class="text-xs sm:text-sm text-gray-400 leading-relaxed mb-6">
+              Hadimba Temple, Old Manali cafés, Vashisht hot springs, Solang Valley — a full local day, your pace.
+            </p>
+
+            <!-- Features Checkmark List -->
+            <ul class="space-y-2.5 mb-8 text-xs sm:text-sm text-gray-300">
+              <li class="flex items-center space-x-2.5">
+                <svg class="w-4 h-4 text-[#ccff00] shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Hidden local stops</span>
+              </li>
+              <li class="flex items-center space-x-2.5">
+                <svg class="w-4 h-4 text-[#ccff00] shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Photo breaks anytime</span>
+              </li>
+              <li class="flex items-center space-x-2.5">
+                <svg class="w-4 h-4 text-[#ccff00] shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Café recommendations</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Action Link -->
+          <div>
+            <a href="https://wa.me/" target="_blank" class="inline-flex items-center space-x-2 text-xs sm:text-sm font-extrabold text-[#ccff00] hover:text-white transition-colors">
+              <span>ENQUIRE ON WHATSAPP</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 3: Rohtang & Atal Tunnel -->
+        <div class="bg-[#12161d] border border-white/10 rounded-2xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:border-[#ccff00]/60 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(204,255,0,0.1)] group">
+          <div>
+            <!-- Top Row: Icon & Price -->
+            <div class="flex justify-between items-start mb-6">
+              <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#ccff00] group-hover:bg-[#ccff00] group-hover:text-black transition-colors duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h10a4 4 0 004-4M7 9l5-5 5 5M12 4v12"/>
+                </svg>
+              </div>
+              <div class="text-right">
+                <span class="text-xl sm:text-2xl font-black text-[#ccff00]">₹5,000</span>
+                <p class="text-[10px] sm:text-xs text-gray-400 uppercase tracking-widest">From • Per Trip</p>
+              </div>
+            </div>
+
+            <!-- Title & Description -->
+            <h3 class="text-xl sm:text-2xl font-black uppercase tracking-wide mb-3 text-white">Rohtang & Atal Tunnel</h3>
+            <p class="text-xs sm:text-sm text-gray-400 leading-relaxed mb-6">
+              Snow runs to Rohtang Pass, Sissu and the Atal Tunnel. Chains on, permits sorted, thermos packed.
+            </p>
+
+            <!-- Features Checkmark List -->
+            <ul class="space-y-2.5 mb-8 text-xs sm:text-sm text-gray-300">
+              <li class="flex items-center space-x-2.5">
+                <svg class="w-4 h-4 text-[#ccff00] shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Permit assistance</span>
+              </li>
+              <li class="flex items-center space-x-2.5">
+                <svg class="w-4 h-4 text-[#ccff00] shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Snow chains fitted</span>
+              </li>
+              <li class="flex items-center space-x-2.5">
+                <svg class="w-4 h-4 text-[#ccff00] shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Sunrise departures</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Action Link -->
+          <div>
+            <a href="https://wa.me/" target="_blank" class="inline-flex items-center space-x-2 text-xs sm:text-sm font-extrabold text-[#ccff00] hover:text-white transition-colors">
+              <span>ENQUIRE ON WHATSAPP</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 4: Outstation Expeditions -->
+        <div class="bg-[#12161d] border border-white/10 rounded-2xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:border-[#ccff00]/60 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(204,255,0,0.1)] group">
+          <div>
+            <!-- Top Row: Icon & Price -->
+            <div class="flex justify-between items-start mb-6">
+              <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#ccff00] group-hover:bg-[#ccff00] group-hover:text-black transition-colors duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <div class="text-right">
+                <span class="text-xl sm:text-2xl font-black text-[#ccff00]">₹4,500</span>
+                <p class="text-[10px] sm:text-xs text-gray-400 uppercase tracking-widest">From • Per Day</p>
+              </div>
+            </div>
+
+            <!-- Title & Description -->
+            <h3 class="text-xl sm:text-2xl font-black uppercase tracking-wide mb-3 text-white">Outstation Expeditions</h3>
+            <p class="text-xs sm:text-sm text-gray-400 leading-relaxed mb-6">
+              Multi-day Leh-Ladakh, Spiti Circuit, Kasol and Tirthan runs. The Jimny was born for these roads.
+            </p>
+
+            <!-- Features Checkmark List -->
+            <ul class="space-y-2.5 mb-8 text-xs sm:text-sm text-gray-300">
+              <li class="flex items-center space-x-2.5">
+                <svg class="w-4 h-4 text-[#ccff00] shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Leh & Spiti veteran</span>
+              </li>
+              <li class="flex items-center space-x-2.5">
+                <svg class="w-4 h-4 text-[#ccff00] shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Camping gear space</span>
+              </li>
+              <li class="flex items-center space-x-2.5">
+                <svg class="w-4 h-4 text-[#ccff00] shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Flexible itineraries</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Action Link -->
+          <div>
+            <a href="https://wa.me/" target="_blank" class="inline-flex items-center space-x-2 text-xs sm:text-sm font-extrabold text-[#ccff00] hover:text-white transition-colors">
+              <span>ENQUIRE ON WHATSAPP</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: MILES OF PROOF (GALLERY) -->
+  <section class="w-full min-h-screen py-24 px-4 sm:px-8 lg:px-16 flex flex-col justify-center items-center bg-[#090b0e] border-t border-b border-white/10">
+    <div class="max-w-7xl w-full">
+      
+      <!-- Section Header (Heading left, Description right on desktop) -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="flex items-center space-x-2 mb-3">
+            <span class="w-8 h-[2px] bg-[#ccff00]"></span>
+            <span class="text-[#ccff00] text-xs sm:text-sm font-bold tracking-widest uppercase">Field Notes</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-none">
+            Miles of <span class="text-[#ccff00]">Proof</span>
+          </h2>
+        </div>
+        <p class="text-gray-400 text-xs sm:text-sm max-w-sm leading-relaxed">
+          Shot on actual trips — snow walls, tunnel runs, forest trails and the passes in between.
+        </p>
+      </div>
+
+      <!-- Bento Grid Gallery Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- ITEM 1: Large Vertical/Square Card (Rohtang Milestone) -->
+        <div class="lg:col-span-1 md:col-span-1 group relative h-[350px] sm:h-[420px] rounded-2xl overflow-hidden border border-white/10 bg-[#12161d]">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1000&auto=format&fit=crop" 
+               alt="Rohtang Milestone" 
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 left-4 right-4">
+            <span class="text-[10px] sm:text-xs font-bold text-[#ccff00] tracking-widest uppercase">Rohtang Pass</span>
+          </div>
+        </div>
+
+        <!-- ITEM 2: Large Wide Card (Winter Pass Crossing) -->
+        <div class="lg:col-span-2 md:col-span-1 group relative h-[350px] sm:h-[420px] rounded-2xl overflow-hidden border border-white/10 bg-[#12161d]">
+          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop" 
+               alt="Winter Pass Crossing" 
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center">
+            <span class="text-xs sm:text-sm font-bold text-[#ccff00] tracking-widest uppercase">Winter Pass Crossing</span>
+          </div>
+        </div>
+
+        <!-- ITEM 3: Atal Tunnel Signage Card -->
+        <div class="group relative h-[280px] sm:h-[320px] rounded-2xl overflow-hidden border border-white/10 bg-[#12161d]">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1000&auto=format&fit=crop" 
+               alt="Atal Tunnel Entry" 
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 left-4 right-4">
+            <span class="text-[10px] sm:text-xs font-bold text-[#ccff00] tracking-widest uppercase">Atal Tunnel Route</span>
+          </div>
+        </div>
+
+        <!-- ITEM 4: Forest Trail Card -->
+        <div class="group relative h-[280px] sm:h-[320px] rounded-2xl overflow-hidden border border-white/10 bg-[#12161d]">
+          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1000&auto=format&fit=crop" 
+               alt="Forest Trail Jimny" 
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 left-4 right-4">
+            <span class="text-[10px] sm:text-xs font-bold text-[#ccff00] tracking-widest uppercase">Pine Forest Trails</span>
+          </div>
+        </div>
+
+        <!-- ITEM 5: Camping / Roof Luggage Card -->
+        <div class="group relative h-[280px] sm:h-[320px] rounded-2xl overflow-hidden border border-white/10 bg-[#12161d]">
+          <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1000&auto=format&fit=crop" 
+               alt="Camping Expedition" 
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 left-4 right-4">
+            <span class="text-[10px] sm:text-xs font-bold text-[#ccff00] tracking-widest uppercase">Expedition Ready</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: TRAVELLERS TALK (TESTIMONIALS) -->
+  <section class="w-full min-h-screen py-24 px-4 sm:px-8 lg:px-16 flex flex-col justify-center items-center bg-[#090b0e] border-t border-b border-white/10">
+    <div class="max-w-7xl w-full">
+      
+      <!-- Section Header -->
+      <div class="mb-12">
+        <div class="flex items-center space-x-2 mb-3">
+          <span class="w-8 h-[2px] bg-[#ccff00]"></span>
+          <span class="text-[#ccff00] text-xs sm:text-sm font-bold tracking-widest uppercase">Word on the Road</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-none">
+          Travellers <span class="text-[#ccff00]">Talk</span>
+        </h2>
+      </div>
+
+      <!-- Testimonials Grid (3 Columns, Responsive) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- REVIEW CARD 1 -->
+        <div class="bg-[#12161d] border border-white/10 rounded-2xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:border-[#ccff00]/60 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(204,255,0,0.1)] group">
+          <div>
+            <!-- Top: Quote Icon & Stars -->
+            <div class="flex justify-between items-center mb-6">
+              <span class="text-[#ccff00] text-2xl font-black font-serif">“</span>
+              <!-- 5 Stars -->
+              <div class="flex space-x-1 text-[#ccff00]">
+                ★★★★★
+              </div>
+            </div>
+
+            <!-- Review Text -->
+            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-8">
+              "Paras drove us through a full snowstorm at Rohtang like it was a Sunday market run. Calm, skilled, and the Jimny never slipped once."
+            </p>
+          </div>
+
+          <!-- Author Info & Route Footer -->
+          <div class="border-t border-white/10 pt-4">
+            <h4 class="text-sm sm:text-base font-black uppercase text-white tracking-wide">Aarav & Meera</h4>
+            <p class="text-[10px] sm:text-xs text-[#ccff00] font-bold tracking-wider uppercase mt-1">Rohtang Snow Trip • Delhi</p>
+          </div>
+        </div>
+
+        <!-- REVIEW CARD 2 -->
+        <div class="bg-[#12161d] border border-white/10 rounded-2xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:border-[#ccff00]/60 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(204,255,0,0.1)] group">
+          <div>
+            <!-- Top: Quote Icon & Stars -->
+            <div class="flex justify-between items-center mb-6">
+              <span class="text-[#ccff00] text-2xl font-black font-serif">“</span>
+              <div class="flex space-x-1 text-[#ccff00]">
+                ★★★★★
+              </div>
+            </div>
+
+            <!-- Review Text -->
+            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-8">
+              "Booked him for a 6-day Spiti circuit. He knew every dhaba, every viewpoint, every shortcut. Best travel decision we made in India."
+            </p>
+          </div>
+
+          <!-- Author Info & Route Footer -->
+          <div class="border-t border-white/10 pt-4">
+            <h4 class="text-sm sm:text-base font-black uppercase text-white tracking-wide">Sarah K.</h4>
+            <p class="text-[10px] sm:text-xs text-[#ccff00] font-bold tracking-wider uppercase mt-1">Spiti Circuit Expedition</p>
+          </div>
+        </div>
+
+        <!-- REVIEW CARD 3 -->
+        <div class="bg-[#12161d] border border-white/10 rounded-2xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:border-[#ccff00]/60 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(204,255,0,0.1)] group md:col-span-2 lg:col-span-1">
+          <div>
+            <!-- Top: Quote Icon & Stars -->
+            <div class="flex justify-between items-center mb-6">
+              <span class="text-[#ccff00] text-2xl font-black font-serif">“</span>
+              <div class="flex space-x-1 text-[#ccff00]">
+                ★★★★★
+              </div>
+            </div>
+
+            <!-- Review Text -->
+            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-8">
+              "3 AM Chandigarh pickup and he was there early — with hot chai waiting. The ride up the mountains felt safer than my flight."
+            </p>
+          </div>
+
+          <!-- Author Info & Route Footer -->
+          <div class="border-t border-white/10 pt-4">
+            <h4 class="text-sm sm:text-base font-black uppercase text-white tracking-wide">Rohan S.</h4>
+            <p class="text-[10px] sm:text-xs text-[#ccff00] font-bold tracking-wider uppercase mt-1">Airport Transfer • Mumbai</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: FOOTER -->
+  <footer class="w-full bg-[#090b0e] border-t border-white/10 pt-16 pb-8 px-4 sm:px-8 lg:px-16">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Top Giant Outline Text -->
+      <div class="w-full overflow-hidden mb-16 text-center lg:text-left">
+        <h1 class="text-[14vw] sm:text-[12vw] lg:text-[11vw] font-black uppercase tracking-wider leading-none text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.2)] select-none">
+          JIMNY RIDES
+        </h1>
+      </div>
+
+      <!-- Divider Line -->
+      <div class="w-full h-[1px] bg-white/10 mb-12"></div>
+
+      <!-- Middle 3-Column Content -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16">
+        
+        <!-- Column 1: Owner Details -->
+        <div>
+          <h3 class="text-base sm:text-lg font-black uppercase tracking-wide text-white mb-1">PARAS SINGH</h3>
+          <p class="text-xs font-bold text-[#ccff00] tracking-widest uppercase mb-4">OWNER • DRIVER • MOUNTAIN GUIDE</p>
+          <p class="text-xs sm:text-sm text-gray-400 leading-relaxed flex items-start space-x-2">
+            <span class="text-[#ccff00]">⊙</span>
+            <span>Stuck on a pass? Emergency mountain assistance for any traveller — call anytime, day or night.</span>
+          </p>
+        </div>
+
+        <!-- Column 2: Contact Details -->
+        <div>
+          <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4">CONTACT</h4>
+          <ul class="space-y-3 text-xs sm:text-sm">
+            <li>
+              <a href="tel:+919800000000" class="flex items-center space-x-2 text-gray-300 hover:text-[#ccff00] transition-colors">
+                <span class="text-[#ccff00]">📞</span>
+                <span>+91 9015430933</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/" target="_blank" class="flex items-center space-x-2 text-gray-300 hover:text-[#ccff00] transition-colors">
+                <span class="text-[#ccff00]">💬</span>
+                <span>WhatsApp direct</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Base Camp -->
+        <div>
+          <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4">BASE CAMP</h4>
+          <ul class="space-y-3 text-xs sm:text-sm text-gray-300">
+            <li class="flex items-center space-x-2">
+              <span class="text-[#ccff00]">📍</span>
+              <span>Manali, Himachal Pradesh</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <span class="text-[#ccff00]">🕒</span>
+              <span>05:00 – 22:00 IST, daily</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Divider Line -->
+      <div class="w-full h-[1px] bg-white/10 mb-8"></div>
+
+      <!-- Bottom Copyright & Tagline Bar -->
+      <div class="flex flex-col sm:flex-row justify-between items-center text-[10px] sm:text-xs text-gray-500 uppercase tracking-widest gap-4">
+        <div>
+          © 2026 JIMNY RIDES MANALI. ALL RIGHTS RESERVED
+        </div>
+        <div class="text-gray-400 font-semibold tracking-wider">
+          ONE DRIVER • ONE JIMNY • ZERO DRAMA
+        </div>
+      </div>
+
+    </div>
+  </footer>
+<script src="index.js"></script>
+
+</body>
+</html>
